@@ -6,3 +6,5 @@
 - 新增“我的”页面，包括元素有：头像、姓名、电话。
 
 ![index](assets/index.png)
+
+![my](assets/my.png)
