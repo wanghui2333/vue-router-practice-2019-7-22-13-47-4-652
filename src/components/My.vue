@@ -2,7 +2,13 @@
   <div>
     返回：
     <button @click="toReturn">🔙</button>
-    Welcome my!
+    欢迎：{{ $store.state.name }}
+    <br />
+    头像：{{ $store.state.head }}
+    <br />
+    姓名：{{ $store.state.name }}
+    <br />
+    电话：{{ $store.state.tel }}
   </div>
 </template>
 
@@ -12,7 +18,7 @@ export default {
   methods: {
     toReturn: function() {
       this.$router.push({
-        path: "/main/" + this.message
+        path: "/main"
       });
     }
   }

@@ -2,11 +2,10 @@
   <div>
     返回：
     <button @click="toReturn">🔙</button>
-    欢迎：{{message}}
+    欢迎：{{ $store.state.name }}
     <br/>
     <button @click="toMy">我的</button>
     <router-view />
-    <!-- <TodoList /> -->
   </div>
 </template>
 
@@ -26,9 +25,6 @@ export default {
         path: "/my"
       });
     }
-  },
-  props: {
-    message: String
   }
 };
 </script>

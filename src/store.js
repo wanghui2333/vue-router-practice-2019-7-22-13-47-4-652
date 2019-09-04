@@ -3,7 +3,10 @@ export default {
         // 应用的数据
         todoList: [],
         currentFilter: "all",
-        id: 0
+        id: 0,
+        head: null,
+        name: null,
+        tel: null
     },
     mutations: {
         addNewData(state, data) {

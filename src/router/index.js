@@ -13,17 +13,6 @@ export default new Router({
             component: Login,
         },
         {
-            path: "/main/:message",
-            component: Main,
-            children: [
-                {
-                    path: "/",
-                    component: TodoList
-                }
-            ],
-            props: true
-        },
-        {
             path: "/main",
             component: Main,
             children: [
