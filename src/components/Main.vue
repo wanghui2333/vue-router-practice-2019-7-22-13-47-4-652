@@ -3,39 +3,32 @@
     返回：
     <button @click="toReturn">🔙</button>
     欢迎：{{message}}
-    <div id="main">
-      <img src="../assets/logo.png" />
-      <TitleComponent />
-      <HeaderComponent />
-      <CheckboxComponent />
-      <BottomComponent />
-    </div>
+    <br/>
+    <button @click="toMy">我的</button>
+    <router-view />
+    <!-- <TodoList /> -->
   </div>
 </template>
 
 <script>
-import HeaderComponent from "./HeaderComponent";
-import CheckboxComponent from "./CheckboxComponent";
-import TitleComponent from "./TitleComponent";
-import BottomComponent from "./BottomComponent";
+
 
 export default {
   name: "main",
-  components: {
-    HeaderComponent,
-    CheckboxComponent,
-    TitleComponent,
-    BottomComponent
-  },
-  props: {
-    message: String
-  },
   methods: {
     toReturn: function() {
       this.$router.push({
         path: "/"
       });
+    },
+    toMy: function() {
+      this.$router.push({
+        path: "/my"
+      });
     }
+  },
+  props: {
+    message: String
   }
 };
 </script>
