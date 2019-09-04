@@ -17,15 +17,15 @@ export default new Router({
             component: Main,
             children: [
                 {
-                    path: "/",
+                    path: "todoList",
                     component: TodoList
+                },
+                {
+                    path: "my",
+                    component: My
                 }
             ],
             props: true
-        },
-        {
-            path: "/my",
-            component: My
         }
     ]
 })

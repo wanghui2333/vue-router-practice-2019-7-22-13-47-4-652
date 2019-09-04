@@ -5,6 +5,7 @@
     欢迎：{{ $store.state.name }}
     <br/>
     <button @click="toMy">我的</button>
+    <button @click="toTodoList">列表信息</button>
     <router-view />
   </div>
 </template>
@@ -22,7 +23,12 @@ export default {
     },
     toMy: function() {
       this.$router.push({
-        path: "/my"
+        path: "/main/my"
+      });
+    },
+    toTodoList: function() {
+      this.$router.push({
+        path: "/main/todoList"
       });
     }
   }
@@ -37,4 +43,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>

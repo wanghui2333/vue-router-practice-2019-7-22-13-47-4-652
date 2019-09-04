@@ -26,7 +26,7 @@ export default {
       this.$store.state.head = this.head;
       this.$store.state.name = this.name;
       this.$store.state.tel = this.tel;
-      this.$router.push({ path: "/main"});
+      this.$router.push({ path: "/main/todoList"});
     }
   }
 };
