@@ -12,9 +12,14 @@
 <script>
 export default {
   name: "Welcome",
+  data: function() {
+    return {
+      message: ""
+    };
+  },
   methods: {
     toStart: function() {
-      this.$router.push({ path: "/main" });
+      this.$router.push({ path: "/main/" + this.message });
     }
   }
 };

@@ -1,10 +1,15 @@
 <template>
-  <div id="main">
-    <img src="../assets/logo.png" />
-    <TitleComponent />
-    <HeaderComponent />
-    <CheckboxComponent />
-    <BottomComponent />
+  <div>
+    返回：
+    <button @click="toReturn">🔙</button>
+    欢迎：{{message}}
+    <div id="main">
+      <img src="../assets/logo.png" />
+      <TitleComponent />
+      <HeaderComponent />
+      <CheckboxComponent />
+      <BottomComponent />
+    </div>
   </div>
 </template>
 
@@ -21,6 +26,16 @@ export default {
     CheckboxComponent,
     TitleComponent,
     BottomComponent
+  },
+  props: {
+    message: String
+  },
+  methods: {
+    toReturn: function() {
+      this.$router.push({
+        path: "/"
+      });
+    }
   }
 };
 </script>

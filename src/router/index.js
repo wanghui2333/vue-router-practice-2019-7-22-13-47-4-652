@@ -11,8 +11,13 @@ export default new Router({
             component: Welcome,
         },
         {
+            path: "/main/:message",
+            component: Main,
+            props: true
+        },
+        {
             path: "/main",
-            component: Main
+            component: Main,
         }
     ]
 })
