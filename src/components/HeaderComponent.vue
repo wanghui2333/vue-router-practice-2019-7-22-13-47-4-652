@@ -17,11 +17,8 @@ export default {
     addTodoList: function() {
       let data = {
         content: this.inputtingText,
-        id: this.$store.state.id,
-        isCheck: false,
         status: "active"
       }
-      this.$store.state.id++;
       this.$store.commit('addNewData', data);
     }
   }

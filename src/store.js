@@ -3,23 +3,16 @@ export default {
         // 应用的数据
         todoList: [],
         currentFilter: "all",
-        id: 0,
         head: null,
         name: null,
         tel: null
     },
     mutations: {
         addNewData(state, data) {
-            state.todoList.push({
-                id: data.id,
-                isCheck: data.isCheck,
-                content: data.content,
-                status: data.status
-            });
+            state.todoList.push(data);
         },
         handleToggleActive: function (state, item){
-
-            state.todoList[item.id].status = state.todoList[item.id].status === 'completed' ? 'active' : 'completed';
+            item.status = item.status === 'completed' ? 'active' : 'completed';
         },
     },
     getters: {

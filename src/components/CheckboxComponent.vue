@@ -1,8 +1,7 @@
 <template>
   <div>
     <ul>
-      <template v-for="(item, index) in filterTodoList" >
-      <li :key="index">
+      <li v-for="(item, index) in filterTodoList" :key="item">
         {{ index }}.
         <input
           type="checkbox"
@@ -11,7 +10,6 @@
         />
         {{ item.content }}
       </li>
-      </template>
     </ul>
   </div>
 </template>

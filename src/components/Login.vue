@@ -2,9 +2,13 @@
   <div>
     Welcome Todo List!
     <div>
-      请输入头像：<input type="text" v-model="head" /><br/>
-      请输入姓名：<input type="text" v-model="name" /><br/>
-      请输入电话：<input type="text" v-model="tel" /><br/>
+      请输入头像：
+      <input type="text" v-model="head" />
+      <br />请输入姓名：
+      <input type="text" v-model="name" />
+      <br />请输入电话：
+      <input type="text" v-model="tel" />
+      <br />
       <button @click="toStart">开始</button>
     </div>
     <!-- <router-view /> -->
@@ -26,8 +30,20 @@ export default {
       this.$store.state.head = this.head;
       this.$store.state.name = this.name;
       this.$store.state.tel = this.tel;
-      this.$router.push({ path: "/main/todoList"});
+      this.$router.push({ path: "/main/todoList" });
     }
   }
 };
 </script>
+
+<style scoped>
+button {
+  display: inline-block;
+  background-color: #fc999b;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 2px;
+  padding: 5px 15px;
+}
+</style>
