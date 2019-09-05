@@ -1,17 +1,18 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="(item, index) in filterTodoList" :key="item">
-        {{ index }}.
-        <input
-          type="checkbox"
-          @click="changeStatus(item)"
-          :checked="item.status === 'completed'"
+  <a-list itemLayout="horizontal" :dataSource="filterTodoList">
+    <a-list-item slot="renderItem" slot-scope="item, index">
+      <a-list-item-meta>
+        <a slot="title" href="https://vue.ant.design/">
+          {{ index }}.
+          <a-checkbox @change="changeStatus(item)" :checked="item.status === 'completed'">{{item.content}}</a-checkbox>
+        </a>
+        <a-avatar
+          slot="avatar"
+          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
         />
-        {{ item.content }}
-      </li>
-    </ul>
-  </div>
+      </a-list-item-meta>
+    </a-list-item>
+  </a-list>
 </template>
 
 <script>

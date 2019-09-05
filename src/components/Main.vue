@@ -1,11 +1,11 @@
 <template>
   <div>
     返回：
-    <button @click="toReturn">🔙</button>
+    <a-button @click="toReturn">🔙</a-button>
     欢迎：{{ $store.state.name }}
     <br/>
-    <button @click="toMy">我的</button>
-    <button @click="toTodoList">列表信息</button>
+    <a-button @click="toMy">我的</a-button>
+    <a-button @click="toTodoList">列表信息</a-button>
     <router-view />
   </div>
 </template>
