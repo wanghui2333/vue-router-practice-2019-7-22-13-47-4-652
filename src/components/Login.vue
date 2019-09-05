@@ -3,13 +3,15 @@
     Welcome Todo List!
     <div>
       请输入头像：
-      <input type="text" v-model="head" />
-      <br />请输入姓名：
-      <input type="text" v-model="name" />
-      <br />请输入电话：
-      <input type="text" v-model="tel" />
-      <br />
-      <button @click="toStart">开始</button>
+      <a-input type="text" v-model="head" style="width: 20%"/>
+      <br/>
+      请输入姓名：
+      <a-input type="text" v-model="name" style="width: 20%"/>
+      <br/>
+      请输入电话：
+      <a-input type="text" v-model="tel" style="width: 20%"/>
+      <br/>
+      <a-button @click="toStart">开始</a-button>
     </div>
     <!-- <router-view /> -->
   </div>
@@ -35,15 +37,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-button {
-  display: inline-block;
-  background-color: #fc999b;
-  color: #ffffff;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 2px;
-  padding: 5px 15px;
-}
-</style>
