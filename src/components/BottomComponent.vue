@@ -30,8 +30,8 @@ button {
   color: #ffffff;
   border-radius: 5px;
   text-align: center;
-  margin-top: 2px;
-  margin-right: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
   padding: 5px 15px;
 }
 </style>

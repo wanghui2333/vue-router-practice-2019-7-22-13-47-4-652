@@ -6,15 +6,19 @@
     <br/>
     <a-button @click="toMy">我的</a-button>
     <a-button @click="toTodoList">列表信息</a-button>
+    <TitleComponent />
     <router-view />
   </div>
 </template>
 
 <script>
-
+import TitleComponent from "./TitleComponent";
 
 export default {
   name: "main",
+  components: {
+    TitleComponent
+  },
   methods: {
     toReturn: function() {
       this.$router.push({
@@ -35,13 +39,5 @@ export default {
 };
 </script>
 <style>
-#main {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 
 </style>
